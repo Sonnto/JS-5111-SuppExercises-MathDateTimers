@@ -32,4 +32,16 @@ window.onload = function () {
   let bDayElement = document.getElementById("bDay");
   let myBDay = new Date(2023, 2, 18, 0, 0);
   bDayElement.innerHTML = myBDay.toDateString();
+
+  //6//
+  function sayTimesUp() {
+    let timeMessageElement = document.getElementById("timeMessage");
+    timeMessageElement.innerHTML = "Time's Up!";
+  }
+
+  function startTimer() {
+    let timer = setTimeout(sayTimesUp, 5000);
+  }
+
+  document.getElementById("btn_start").onclick = startTimer;
 };
